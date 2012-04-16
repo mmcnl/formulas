@@ -1,0 +1,92 @@
+/**** Overall page styles ****/
+  body {
+    background-color: #002;
+  }
+  .container-fluid {
+    background-color: white;
+    max-width: 1200px;
+    margin: 20px;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+  }
+  h2.site-title {
+    margin: 8px;
+  }
+
+  h2.site-title a {
+    color: black;
+    text-decoration: none;
+  }
+
+/**** Help sidebar ****/
+  .intro {
+    font-size: 105%;
+  }
+  .disclaimer {
+    font-size: 80%;
+  }
+
+/**** Search form ****/
+  #search-form {
+    padding: 8px;
+    margin-bottom: 6px;
+  }
+  legend {
+    text-align:center;
+    font-size: 14px;
+    font-weight:bold;
+    font-style: italic;
+  }
+  label, input {
+    font-size: 16px;
+  }
+  input::-webkit-input-placeholder {
+      color:    #DDD;
+  }
+  input:-moz-placeholder {
+      color:    #DDD;
+  }
+
+/**** Results table ****/
+    th, td {
+      font-size: 20px;
+    }
+    td.chinese {
+      font-size: 26px;
+    }
+    /**** Formula details popover ****/
+    .progress {       /* "progress bar" graph indicates formula relevance */
+      width: 120px; 
+      margin: 0px;
+    }
+    .popover {
+      width: 500px;
+    }
+    .popover-inner {
+      width: 480px;
+    }
+    .popover-inner hr {
+      margin: 4px 0px 0px 0px;
+    }
+    .popover-title {
+      padding: 4px;
+      font-size: 150%;
+    }
+    .popover-chinese {
+      font-size: 40px;
+      font-weight: normal;
+    }
+    .formula-category {
+      float:right;
+      margin-top: 6px;
+      font-size: 70%;
+      font-style: italic;
+      font-weight: normal;
+    }
+    /* the postgres headline function wraps matched search results in <b> tags
+    http://www.postgresql.org/docs/8.4/static/textsearch-controls.html */ 
+    b {
+      font-weight: normal;
+      background-color: #FFFFC8;
+    }

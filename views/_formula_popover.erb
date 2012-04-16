@@ -1,0 +1,19 @@
+<tr class='formula-row pop'
+    title=" <div class='formula-category'><%= h f.category %></div>
+            <div class='popover-chinese'><%= h f.chinese_characters %></div><%= h f.pinyin %>"
+    data-content="<strong>Dx: </strong> <%= h f.diagnosis_highlighted %><hr />
+                  <strong>Sx: </strong> <%= h f.symptoms_highlighted %><hr /> 
+                  <strong>P:  </strong> <%= h f.pulse_highlighted %><hr />    
+                  <strong>T:  </strong> <%= h f.tongue_highlighted %>" >
+  <td class='progress-bar'>
+    <div class='progress'>
+      <div class='bar' style='width: <%= f.scaled_relevance_ranking %>%'></div>
+    </div>
+  </td>
+  <td class='formula-info'>
+    
+    <%  escaped_name = Rack::Utils.escape(f.pinyin_plain)
+        ext_url = "http://www.rootdown.us/Formulas/#{escaped_name}?query=#{escaped_name}" %>
+    <a target='_blank' href='<%= ext_url %>'><%= h f.pinyin %></a>
+  </td>
+</tr>

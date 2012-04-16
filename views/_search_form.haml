@@ -1,0 +1,17 @@
+%form.well.form-horizontal#search-form
+  %fieldset
+    %legend Try describing the presentation with a few key words.  Then hover over results for more details.
+    - form_info = {  'symptoms'  => 'e.g. sweating, chills, coughing',   |
+                     'pulse'     => 'e.g. rapid, superficial',           |
+                     'tongue'    => 'e.g. pale with thin white coating', |
+                     'diagnosis' => 'e.g. yin deficiency' }
+    - form_info.each do | field, placeholder|
+      .control-group
+        %label.control-label(for="#{field}") #{field}
+        .controls
+          %input.query-data.span6(  type="text" placeholder="#{placeholder}"
+                                    name="#{field}" id="#{field}" 
+                                    value="#{params[field]}")
+    .controls
+      %input.btn(type='submit' value='Search')
+      %input.btn#reset(type='button' value='Reset Form')

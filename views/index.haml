@@ -1,0 +1,9 @@
+%h2.site-title
+  %a(href='/') 中医方剂搜索演示 TCM Formula Search Demo
+.row-fluid
+  .span3
+    = haml :_help_sidebar
+  .span9
+    = haml :_search_form
+    #results-table-div
+      = haml :_results_table unless @formulas.empty?

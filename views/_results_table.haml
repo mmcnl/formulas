@@ -1,0 +1,9 @@
+- if @formulas.present?
+  %table.results-table.table.table-striped.table-compressed
+    %thead
+      %tr
+        %th Relevance
+        %th.formula-name Herbal Formula
+    %tbody
+      - @formulas.each do |f|
+        = erb :'_formula_popover', locals: { f: f }
