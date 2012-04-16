@@ -2,15 +2,16 @@
 
 **To see the app live, please visit [formulas.heroku.com](http://formulas.heroku.com)**
 
-This little app demonstrates the use of a few current technologies and approaches:
+This little demo app shows the use of a few current technologies and approaches:
 
-  * Sinatra microframework
+  * Sinatra Ruby microframework
   * PostgreSQL full-text, relevance ranked search
     * migrations to import and convert a legacy sqlite database
     * compatible with free Heroku accounts (unlike Solr)
   * Cucumber/Capybara for high-level Executable Specification
   * RSpec for lower level specification
   * jQuery for AJAX updates and other dynamic behavior
+  * Haml for templating
   * Twitter Bootstrap for layout, design, and popovers
 
 ###Features
