@@ -44,10 +44,10 @@ end
 
 When /^the user types 'fever' into the 'symptoms' field and moves to another field$/ do
   page.execute_script "$('input#symptoms').focus().val('fever').trigger('change')"
-  sleep 1
 end
 
 Then /^the results should immediately update$/ do
+  sleep 1
 end
 
 Given /^there is no popover displayed for the first formula$/ do
